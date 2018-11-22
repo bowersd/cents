@@ -2,6 +2,8 @@ from lxml import html
 import requests
 import sys
 
+#todo: retrieve different attributes of a stock symbol, using argparse
+
 def last_close(symbol):
     #departed from usual ban against one-time use variables, function-internal data shunting for readability
     content = requests.get('https://finance.yahoo.com/quote/{}?p={}'.format(symbol, symbol))
