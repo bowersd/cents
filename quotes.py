@@ -12,5 +12,4 @@ def last_close(symbol):
     return float(summary_table[0].xpath('.//td[contains(@class,"Ta(end)")]//text()')[0])
 
 if __name__ == "__main__":
-    for x in sys.argv[1:]:
-        print x, "{:9.2f}".format(last_close(x))
+    for x in sys.argv[1:]: print x, "{:9.2f}".format(last_close(x))
